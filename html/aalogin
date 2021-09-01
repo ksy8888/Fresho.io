@@ -1,0 +1,36 @@
+<meta charset="utf-8" />
+<?php	
+
+	error_reporting(E_ALL);
+	ini_set("display_errors", 1);
+	
+	require_once 'php/config.php';
+	require_once 'php/mysql.lib.php';
+
+	$link = getNewsConn();
+
+	//POST로 받아온 아이다와 비밀번호가 비었다면 알림창을 띄우고 전 페이지로 돌아갑니다.
+	if($_POST["phone"] == "" || $_POST["pass"] == ""){
+		echo '<script> alert("아이디나 패스워드 입력하세요"); history.back(); </script>';
+	}else{
+	//password변수에 POST로 받아온 값을 저장하고 sql문으로 POST로 받아온 아이디값을 찾습니다.
+	$password = $_POST['pass'];
+	$sql = "select * from Tjoin where phone='".$_POST['phone']."'";
+	// $sql1 = "select pass from Tjoin where pass='".$_POST['pass']."'";
+	// $hash_phone = $sql;
+	// $hash_pw = $sql1;
+	$member = $sql->mysql_fetch_array();
+	$hash_pw = $member['pass']; //$hash_pw에 POSt로 받아온 아이디열의 비밀번호를 저장합니다. 
+	echo '<script> alert("아이디나 패스워드 입력하세요 %s", $password); history.back(); </script>';
+
+	if(password_verify($password, $hash_pw)) //만약 password변수와 hash_pw변수가 같다면 세션값을 저장하고 알림창을 띄운후 main.php파일로 넘어갑니다.
+	{
+		$_SESSION['phone'] = $sql;
+		$_SESSION['pass'] = $sql1;
+		echo "<script>alert('로그인되었습니다.'); location.href='http://fresho.dothome.co.kr/index.html';</script>";
+	}else{ // 비밀번호가 같지 않다면 알림창을 띄우고 전 페이지로 돌아갑니다
+		echo '<script> alert("아이디나 패스워드 " ); history.back(); </script>';
+
+	}
+}
+?>

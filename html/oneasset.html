@@ -1,0 +1,55 @@
+<?php include "db.php"; ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>fresho-cafe</title>
+<link rel="stylesheet" type="text/css" href="css/test.css" />
+</head>
+<body>
+	<div id="bg1"></div>
+		<div id="main_in">
+			<div id="menu">
+				<div id="logo"><a href="http://fresho.dothome.co.kr/aaindex.html"><img src="main(image)/logo(finish).png" title="shop_icon"/></a></div>
+					<form>
+						<div id="search_ser">
+							<ul>
+								<!-- <li><input type="text" placeholder="상품검색" size="50" id="ser" /></li> -->
+								<!-- <li><button id="se_br"><img src="/search.png"></button></li> -->
+							</ul>
+						</div>
+					</form>
+				</div>
+				<h3 id="tit1">제품리스트</h3>
+					<div id="shop_list">
+						<?php
+							$sql = mq("select * from Cafe where no=3");
+							$shoplist = $sql->fetch_array();
+							
+						?>
+						
+						
+							<?php
+			$bno = $_GET['no']; /* bno함수에 no값을 받아와 넣음*/
+			$sql = mq("select * from Cafe where no='".$bno."'"); /* 받아온 idx값을 선택 */
+		
+			$shopinfo = $sql->fetch_array();
+		
+	?>
+			
+			
+					</div>
+					
+				
+				
+						<div class="item">
+							<div class="pro_img"><a href="prodet.php?idx=<?php echo $shoplist['no'];?>"><img src="<?php echo $shoplist['img'];?>" alt="propic" title="propic" /></a></div>
+							<div class="pro_nt"><a href="prodet.php?idx=<?php echo $shoplist['no'];?>"><?php echo $shoplist['name'];?></a></div>
+							<div class="pro_price"><?php echo $shoplist['price'];?></div>
+						</div>
+					
+				</div><!---shop_list end--->
+			
+		<footer></footer>
+</body>
+</html>

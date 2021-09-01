@@ -1,0 +1,102 @@
+	header {position :fixed;
+	background-color: #FFFAF1;
+	width : 100%;
+	top:0;
+	left:0;
+	}
+	
+	/* 로고 위치 */
+	.logo-static{ padding-left : 50px; margin : 40px 10px 0px 20px;}
+	.join { margin-right: 20px; float:right; }
+	
+	
+	
+	.menu-box{padding : 0px 0px 0px 300px;list-style:none; top:0;}
+	.menu-box li{float : left ;}
+	.menu{width :210px; height :70px; object-fit : cover;
+				display : inline-block;  }
+	
+	.login-btn{width :200px; height :70px; top : 0px;  border:0; outline:0;}
+	.join-btn{
+	border:3px solid #F39800; padding: 0px; margin-bottom:10px;}
+	/* 상단 회원가입 로고 */
+	
+	
+	#modal {
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+		z-index:1;
+	}
+
+	#modal h2 {
+	  margin:0;   
+	}
+
+	#modal button {
+	  display:inline-block;
+	  width:100px;
+	  margin-left:calc(100% - 100px - 10px);
+	}
+
+	#modal .modal_content {
+	  width:400px;
+	  margin:100px auto;
+	  padding:20px 10px;
+	  background:#fff;
+	  border:2px solid #666;
+	}
+
+	#modal .modal_layer {
+	  position:fixed;
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  background:rgba(0, 0, 0, 0.5);
+	  z-index:-1;
+	}   
+	.join img {
+	margin-right : 100px;
+	margin-top : 50px;
+	width :150px; 
+	height :70px;
+	}
+
+	.fojoin{
+	float : center;
+	width :150px; 
+	height :70px;
+	}
+	
+	/* 회원가입 클릭시 나오는 폼 */
+	
+	
+
+
+
+
+
+	.second-box{ width : 1700px; height : 700px; margin-top: 50px;}
+	.cook-box {float : left ;  margin-left : 150px; margin-top:110px;}
+	.first-cook{ width : 1700px; height : 290px;  margin-top:40px;}
+	.second-cook{ width : 1700px; height : 290px; margin-top : 0px; }
+	.cook {width :150px; height :100px; 
+				display : inline-block;
+				border:3px solid #F39800; padding: 0px;
+				border-radius: 50%;
+				margin-left : 30px;
+				margin-top: 20px;
+				padding : 40px 20px 40px 20px;
+				}	
+	 
+
+	
+	/* 요리 종류 */
+
+
+
+
+	#check{border:3px solid #F39800; padding: 0px;}
+	/* 어디 페이지인지 확인css */

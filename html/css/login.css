@@ -1,0 +1,139 @@
+	header {position :fixed;
+	background-color: #FFFAF1;
+	width : 100%;
+	top:0;
+	left:0;
+	}
+	
+	/* 로고 위치 */
+	.logo-static{ left-padding : 50px; margin : 40px 10px 0px 20px;}
+	.join { margin-right: 20px; float:right; }
+
+	.join-btn{
+	border:3px solid #F39800; padding: 0px; margin-bottom:10px;}
+	/* 상단 회원가입 로고 */
+	
+	
+	#modal {
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+		z-index:1;
+	}
+
+	#modal h2 {
+	  margin:0;   
+	}
+
+	#modal button {
+	  display:inline-block;
+	  width:100px;
+	  margin-left:calc(100% - 100px - 10px);
+	}
+
+	#modal .modal_content {
+	  width:400px;
+	  margin:100px auto;
+	  padding:20px 10px;
+	  background:#fff;
+	  border:2px solid #666;
+	}
+
+	#modal .modal_layer {
+	  position:fixed;
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  background:rgba(0, 0, 0, 0.5);
+	  z-index:-1;
+	}   
+	.join img {
+	margin-right : 100px;
+	margin-top : 50px;
+	width :150px; 
+	height :70px;
+	}
+
+	.fojoin{
+	float : center;
+	width :150px; 
+	height :70px;
+	}
+	
+	/* 회원가입 클릭시 나오는 폼 */
+	
+	
+
+	.first-box{ width : 2000px; height : 150px; margin-top: 150px;}
+	.login-logo img{ margin-left : 700px;; widht : 200px; height : 150px;}
+	/* 로그인 로고 */
+	
+	
+	
+	.second-box{ width : 2000px; height : 250px;}
+	.phone-line { width : 2000px; height : 100px; margin-top : 90px;}
+	
+	.pass-line { width : 2000px;	 height : 100px;margin-top : 20px;
+		margin-right : 40px;}
+		
+	.end-box{width : 2000px; height : 10px;} 	
+	
+	/* 입력공간 바탕  */
+	
+	
+	/* form{ */
+		/* width: 1500px; */
+		/* height:500px; */
+		/* float : left; */
+	/* } */
+	
+	.phone { margin-left : 550px;	
+	margin-top:100px;
+	width : 200px; 
+	height : 90px; margin-right : 40px;
+	float : left;}
+	
+	.pass{
+	width : 200px; 
+	margin-top:40px;
+	margin-left:550px;
+	/* padding-left: -400px; */
+	height : 90px;
+	margin-right : 40px;
+	/* float : left; */
+		}
+		
+	#oks{margin-top:40px; width :170px; margin-left:840px; height :100px; background-color:#ffffff; border:0; outline:0;}
+	
+	.ok {width :150px; height :80px; border:3px solid #F39800;}
+
+	.passf{margin-top: 10px;  margin-left:40px; width :290px; height :80px; border:3px solid #F39800;  }
+
+		/* 입력 공간 이미지 */
+	.phonew{
+	margin-top:100px;
+	margin-right:350px;
+
+	width :700px; 
+	height :70px;
+	font-size:50px;
+	float : right;
+	input:focus{outline :1px solid  #F39800;}
+	}
+	
+	
+	.passw{
+		
+	margin-right:350px;
+	width :700px; 
+	margin-top:40px;
+	height :70px;
+	font-size:50px;
+	float : right;
+	input:focus{outline :1px solid  #F39800;}
+	}
+	
+
+	/* 입력창 */

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>freshO(식자재)</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://fresho.dothome.co.kr/main(image)/logo(finish).png" />
+	<link rel ="stylesheet" type="text/css" href="css/mypage.css">
+	<meta property="og:locale" content="ko" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="freshO(식자재)" />
+	<meta property="og:url" content="http://fresho.dothome.co.kr/" />
+	<meta property="og:site_name" content="Fresho" />
+	<meta property="og:image" src="main(image)/logo(finish).png" />
+	<link href="css/mypage.css" rel="stylesheet" type="text/css" >
+	<link href="css/slide.css" rel="stylesheet" type="text/css" >
+	
+
+</head>
+
+<body class="cafe page">
+	
+		<header class="header">
+
+					<div class="join">  
+					<img id="modal_open_btn" class="join-btn" src="main(image)/join.png" alt=""></button> 
+					</div>
+	
+					<div id="modal">
+				   
+					<div class="modal_content">
+						<img class="fojoin" src="main(image)/join.png" alt=""><br />
+					    <form method="post" action="join.php" enctype="multipart/form-data">
+							<fieldset>
+								<legend>정보를 입력해주세요.</legend>
+								이름  <input type="text" name ="name"  /><br />
+								전화번호 <input type="tel" name ="phone"  placeholder="010-0000-0000"><br />
+								주소 <input type="text" name ="address" /><br />
+								연령 <input type="number" name ="age"  /><br />
+								비밀번호 <input type="password" name ="pass"  /><br />
+								비밀번호 확인 <input type="password" name ="checkpass" />
+								
+								
+						</fieldset>
+						<button type="submit" id="submit_btn">가입완료</button><br />
+						<p>가입한 적이 있으신 분은 로그인버튼을 눌러주세요.</p>
+						<button type="button" id="login2_btn" onClick="location.href='http://fresho.dothome.co.kr/login.html'" >로그인</button>
+						</form>
+						
+					    												
+						<button type="button" id="modal_close_btn">닫기</button>       
+					</div>     
+					<div class="modal_layer"></div>
+					</div>
+					
+					<script>
+					
+					document.getElementById("modal_open_btn").onclick = function() {
+						document.getElementById("modal").style.display="block";
+					}
+				   
+					document.getElementById("modal_close_btn").onclick = function() {
+						document.getElementById("modal").style.display="none";
+					}   
+					
+					</script>
+	
+			<div class="header-box">
+				<div class="header-left">
+					<div class="logo">
+						<a href="http://fresho.dothome.co.kr">
+							<img class="logo-static" src="main(image)/logo(finish).png" alt="freshO"/>
+						</a>
+						
+					</div>
+				</div>
+			</div>
+			
+			
+				
+					<div class="nav-box">
+						<ul class="menu-box">
+							<li><a href="http://fresho.dothome.co.kr/list.html"/>
+								<img class="menu" src="main(image)/fresh.png" alt="fresh"/></a></li>
+							<li><a href="http://fresho.dothome.co.kr/cook.html"/>
+								<img class="menu"  src="main(image)/cook.png" alt="cook"/></a></li>
+							<li><a href="http://fresho.dothome.co.kr/cafe.html"/>
+								<img class="menu"  src="main(image)/cafe.png" alt="cafe"/></a></li>
+							<li><a href="http://fresho.dothome.co.kr/mypage.html"/>
+								<img class="menu"  id="check" src="main(image)/mypage.png" alt="mypage"/></a></li>
+							<li><a href="http://fresho.dothome.co.kr/QnA.html"/>
+								<img class="menu" src="main(image)/QnA.png" alt="QnA"/></a></li>
+							<li><a class="btn" href="http://fresho.dothome.co.kr/login.html" target="self"> 
+								<img class="login-btn" src="main(image)/login.png" alt="login"/></a></li></a> 
+						</ul>
+					</div>
+				
+					
+			</div>
+			
+			
+			
+
+	</header>
+	
+			
+			<div id="main_in">
+		<div id="menu">
+			<div id="logo"><a href="/"><img src="/shop.png" alt="shop_icon" title="shop_icon"/></a></div>
+				<form action="/shop/search.php" method="post">
+					<div id="search_ser">
+						<ul>
+							<li><input type="text" placeholder="상품검색" size="50" id="ser" /></li>
+							<li><button id="se_br"><img src="/search.png"></button></li>
+						</ul>
+					</div>
+				</form>
+			</div>	
+				<div id="content">
+					<h2>장바구니</h2>
+					 <table class="list-table">
+				      <thead>
+				          <tr>
+				              <th width="350">상품정보</th>
+				              <th width="120">상품금액</th>
+				              <th width="150">판매자명</th>
+				              <th width="100">등록일</th>
+				           </tr>
+				        </thead>
+				        <?php 
+				        	$sql3 = mq("select * from basket order by idx desc");
+							while($bask = $sql3->fetch_array()){
+						?>
+				        <tbody>
+				        <tr>
+				          <td width="300">
+				          	<div class="bak_item">
+							<div class="pro_img"><img src="/shop/<?php echo $bask['pro_pic'];?>.jpg" alt="propic" title="propic" /></div>
+							<div class="pro_nt"><?php echo $bask['pro_name'];?></div>
+						</div>
+				          </td>
+				          <td width="150"><?php echo $bask['price'];?></td>
+				          <td width="150">SWR쇼핑</td>
+				          <td width="100"><?php echo $bask['date']; ?></td>
+				        </tr>
+				      </tbody>
+				  <?php } ?>
+				    </table>
+				</div>
+			</div>
+			
+
+	
+	
+	

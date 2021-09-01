@@ -1,0 +1,161 @@
+header {position :fixed;
+	background-color: #FFFAF1;
+	width : 100%;
+	top:0;
+	left:0;
+	}
+	
+	.poket{
+	position:fixed;
+	width : 100%;
+	bottom :0;
+	left:0;
+	float : bottom;
+	height:60px;
+		background-color: #FFFAF1;
+}
+	.poket legend{
+	float:right;}
+	
+	hr{
+	Color:#F39800; }
+
+	.login-btn{width :200px; height :60px; top : 0px;  border:0; outline:0;}
+ 
+	.join { margin-right: 20px; float:right; }
+	.hello { margin-top: 50px; margin-right:30px;  float: right; }
+	.join-btn{width :200px; height :70px; }
+	.logo-static{ left-padding : 50px; margin : 40px 10px 0px 20px;}
+	
+	
+	
+	ul{padding : 0px 0px 0px 300px;list-style:none; top:0;}
+	.menu-box li{float : left ;}
+	.menu{width :210px; height :60px; object-fit : cover;
+				display : inline-block;  }
+	
+	
+	.first-box{ width : 2000px; height : 650px; margin-top :235px;}
+	.left{padding-top :250px;padding-left: 85px; float : left ; width:100px; height : 150px; object-fit : cover;}
+	.right{padding-top :250px; padding-right: 180px; float : right; width:100px; height : 150px; object-fit : cover;}
+	.ad {
+		width : 1400px;
+		height: 700px;
+		/* width: 100%; height: auto; */
+		margin-top : 5px;
+		margin-left : 50px;
+		object-fit:cover;
+	}
+
+
+
+
+
+
+
+
+	
+	
+	#serch2 {
+	width :100px; 
+	height :70px;
+	float : left;
+	/* margin-left: 230px; */
+	margin-right : 10px;
+	padding-right: 20px;
+	}
+	
+	.cookse2{
+	width :500px; 
+	height :65px;
+		font-size:50px;
+		float : left;
+		margin-right :20px;
+		padding-top: 10px;
+		margin-top:50px;
+		color : #F39800;
+		input:focus{outline :1px solid  #F39800;}
+	}
+	
+	.cookse{
+	width :800px; 
+	height :100px;
+		font-size:50px;
+
+		float : left;
+		margin-right :50px;
+		color : #F39800;
+		input:focus{outline :1px solid  #F39800;}
+	}
+	#ok2 {
+	width :130px; 
+	height :70px;
+	float:left;
+	border:3px solid #F39800; padding: 0px;
+	}
+	
+	#ok {
+	width :200px; 
+	height :100px;
+	float:left;
+	border:3px solid #F39800; padding: 0px;
+	}
+	
+	.third-box{ width : 1500px; height : 750px;}
+	
+	
+	#modal {
+		display:none;
+		position:relative;
+		width:100%;
+		height:100%;
+		z-index:1;
+	}
+
+	#modal h2 {
+	  margin:0;   
+	}
+
+	#modal button {
+	  display:inline-block;
+	  width:100px;
+	  margin-left:calc(100% - 100px - 10px);
+	}
+
+	#modal .modal_content {
+	  width:400px;
+	  margin:100px auto;
+	  padding:20px 10px;
+	  background:#fff;
+	  border:2px solid #666;
+	}
+
+	#modal .modal_layer {
+	  position:fixed;
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  background:rgba(0, 0, 0, 0.5);
+	  z-index:-1;
+	}   
+	.join img {
+	margin-right : 100px;
+	margin-top : 50px;
+	width :150px; 
+	height :70px;
+	}
+	
+	.join-btn{
+	border:3px solid #F39800; padding: 0px;}
+	
+	.fojoin{
+	float : center;
+	width :150px; 
+	height :70px;
+	}
+
+	
+	
+</style>
+	
